@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            RESTAURENT
+        </title>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                background-image: url(images/Background2.png);
+                color: white;
+            }
+            .navbar{
+               display: flex;
+               height: 70px;
+               padding: 0px 100px 0px 50px;
+               align-items: center;
+               color: orange;
+        
+            }
+            .links{
+                display: flex;
+                list-style: none;
+                gap: 50px;
+                cursor: pointer;
+                margin-left: 150px;
+            }
+            .logo{
+                font-size: 35px;
+            }
+            .hero{
+                display: flex;
+            }
+            .left{
+                display: flex;
+                flex-direction: column;
+                padding-left: 240px;
+                align-items: start;
+                padding-top: 180px;
+            }
+            .left1{
+                font-size: 30px;
+                font-style: italic;
+            }
+            .left2{
+                margin-top: 0px;
+                padding: 0px;
+                font-size: 80px;
+            }
+            .left3{
+                font-size: 25px;
+                font-style: italic;
+                margin-bottom: 15px;
+            }
+            .left4{
+                border-style: solid;
+                border-width: 2px;
+                border-radius: 50px;
+                text-align: center;
+                padding: 5px 15px;
+                cursor: pointer;
+            }
+            #food{
+                background: url(images/food.png);
+                width: 500px;
+                height: 500px;
+                background-size: cover;
+                position: relative;
+                top: -290px;
+                left: -200px;
+                float: right;
+                border: 2px solid white;
+                border-radius: 50%;
+            }
+            img{
+                width: 110px;
+                object-fit: cover;
+                position:relative ;
+                bottom: -330px;
+                left: -680px;
+                padding: 1px;
+                border: 2px solid white;
+                border-radius: 50%;
+                cursor: pointer;
+            
+            }
+            .left4:hover{
+                color: bisque;
+            }
+            .links li:hover{
+                color: burlywood;
+            }
+            img:hover{
+                color: chocolate;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="navbar">
+                <div class="logo">CollegeRestro</div>
+                <ul class="links">
+                    <li>Home</li>
+                    <li>Menu</li>
+                    <li>About</li>
+                    <li>Location</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="hero">
+                <div class="left">
+                    <span class="left1">Are You Hungry?</span>
+                    <span class="left2">Don't Wait</span>
+                    <span class="left3">Let start to order food</span>
+                    <span class="left4">Check out Menu</span>
+                </div>
+            </div>
+            <div class="food" id="food">
+                <img src="images/food1.png" alt="" id="food1">
+                <img src="images/food2.png" alt="" id="food2">
+                <img src="images/food3.png" alt="" id="food3">
+                <img src="images/food4.png" alt="" id="food4">
+            </div>
+        </div>
+        <script>
+            let food = document.getElementById("food");
+            let food1 = document.getElementById("food1");
+            let food2 = document.getElementById("food2");
+            let food3 = document.getElementById("food3");
+            let food4 = document.getElementById("food4");
+            let left4 = document.getElementsByClassName("left4")[0];
+
+            food1.addEventListener('click',()=>{food.style.backgroundImage="url('images/food1.png')";});
+             food2.addEventListener('click',()=>{food.style.backgroundImage="url('images/food2.png')";});
+              food3.addEventListener('click',()=>{food.style.backgroundImage="url('images/food3.png')";});
+               food4.addEventListener('click',()=>{food.style.backgroundImage="url('images/food4.png')";});
+            left4.addEventListener('click',()=>{alert("Check out Menu");});
+
+        </script>
+    </body>
+</html>
